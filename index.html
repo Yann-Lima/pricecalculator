@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Price Calculation</title>
+
+</head>
+<body>
+    <div class="container">
+        <head>Building and Price</head>
+        <div class="progress-bar">
+            <div class="step">
+                <p>Name</p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+
+            <div class="step">
+                <p>Contact</p>
+                <div class="bullet">
+                  <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+
+              <div class="step">
+                <p>Area</p>
+                <div class="bullet">
+                  <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+
+              <div class="step">
+                <p>Roof</p>
+                <div class="bullet">
+                  <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+
+              <div class="step">
+                <p>Send</p>
+                <div class="bullet">
+                  <span>5</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+        </div>
+        <div class="form-outer">
+          <form action="#">
+                <div class="page slide-page">
+                    <div class="title">Property Information:</div>
+                    <div class="field">
+                        <div class="label">First name</div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">Last name</div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <button class="firstNext next">Next</button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Contact Information:</div>
+                    <div class="field">
+                      <div class="label">E-mail Address</div>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <div class="label">Phone Number</div>
+                      <input type="Number">
+                    </div>
+                    <div class="field btns">
+                      <button class="prev-1 prev">Back</button>
+                      <button class="next-1 next">Next</button>
+                    </div>
+                  </div>
+
+                  <div class="page">
+                    <div class="title">Address:</div>
+                    <div class="field">
+                      <div class="label">Address</div>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <div class="label">Climatic Area</div>
+                      <input id="area" type="number">
+                    </div>
+                    <div class="field btns">
+                      <button class="prev-2 prev">Back</button>
+                      <button class="next-2 next">Next</button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Main Roof:</div>
+                    <div class="field">
+                      <div class="label">Type of roof</div>
+                      <select id="typeroof">
+                        <option value='', disabled selected>Select option</option>
+                        <option value="500">Shingle</option>
+                        <option value="650">Metal</option>
+                        <option value="800">Membrane</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <div class="label">How many floors?</div>
+                      <select id="stores">
+                        <option value='', disabled selected>Select option</option>
+                        <option value="1">1 story</option>
+                        <option value="1.10">2 stores</option>
+                    </select>
+                    </div>
+                    <div class="field btns">
+                      <button class="prev-3 prev">Back</button>
+                      <button class="next-3 submit">Next</button>
+                    </div>
+                </div>
+
+                
+                <div class="page">
+                    <div class="title">Details Roof:</div>
+                    <div class="field">
+                      <div class="label">Sloped Roof</div>
+                      <select id="pitch">
+                        <option value='', disabled selected>Select option</option>
+                        <option value="1.10">low</option>
+                        <option value="1.20">Medium</option>
+                        <option value="1.30">High</option>
+                        <option value="1.40">High+</option>
+                    </select>
+                    </div>
+                    <div class="field">
+                      <div class="label">Other details?</div>
+                      <select id="stores">
+                        <option value='', disabled selected>Select option</option>
+                        <option value="">Solar</option>
+                        <option value="">Skylight</option>
+                    </select>
+                    </div>
+                    <div class="field btns">
+                      <button class="prev-4 prev">Back</button>
+                      <button onclick="totalprice()" class="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+          <div class="prices">
+            <h3>Your Roof estimate between</h3>
+              <div class="minimum">
+                <h4>Minimum</h4>
+                <h5 id="priceminimum"></h5>
+              </div>
+              <div class="maximum">
+                <h4>Maximum</h4>
+                <h5 class="pricetext"  id="pricemaximum"></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
